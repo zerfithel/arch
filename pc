@@ -20,8 +20,8 @@ if [ $# -eq 1 ]; then
 ▓▓▓▓                    Manage pacman packages like on      
 ▓▓  ▓▓                  Ubuntu/Debian based Distros!      
 ▓▓  ░░▓▓                Made by: zerfithel      
-▒▒  ░░░░▓▓              Version: 1.0.0      
-▒▒▒▒░░▒▒░░▓▓            Get new scripts here: https://discord.gg/dfbpeQChHM      
+▒▒  ░░░░▓▓              Version: 1.0.1      
+▒▒▒▒░░▒▒░░▓▓            Get new scripts here: https://discord.gg/qAznDdPFvy      
   ▒▒▒▒░░░░░░▓▓                
     ▒▒▒▒░░░░░░▓▓              
       ▒▒▒▒░░▒▒░░▓▓██          
