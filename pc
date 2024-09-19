@@ -1,0 +1,123 @@
+#!/bin/bash
+
+
+if [ $# -ne 1 ] && [ $# -ne 2 ]; then
+
+  echo "Usage: sudo pc install/remove <package_name> or sudo pc -v or sudo pc update or sudo pc upgrade"
+
+  exit 1
+
+fi
+
+
+if [ $# -eq 1 ]; then
+
+  case $1 in
+
+    "-v")
+
+      echo "                            
+▓▓▓▓                    Manage pacman packages like on      
+▓▓  ▓▓                  Ubuntu/Debian based Distros!      
+▓▓  ░░▓▓                Made by: zerfithel      
+▒▒  ░░░░▓▓              Version: 1.0.0      
+▒▒▒▒░░▒▒░░▓▓            Get new scripts here: https://discord.gg/dfbpeQChHM      
+  ▒▒▒▒░░░░░░▓▓                
+    ▒▒▒▒░░░░░░▓▓              
+      ▒▒▒▒░░▒▒░░▓▓██          
+        ▒▒▒▒░░░░██▓▓██        
+          ▒▒  ██▓▓▓▓██        
+            ▒▒▓▓▓▓██▓▓██      
+          ██▓▓▒▒████▓▓▓▓██    
+            ████▒▒  ██▓▓▓▓██  
+                ▒▒    ██▓▓▓▓██
+                        ██▓▓██
+                ▒▒      ████  
+                              
+                ▒▒            "
+
+      exit 0
+
+      ;;
+
+    "update")
+
+      sudo pacman -Syy
+
+      exit 0
+
+      ;;
+
+    "upgrade")
+
+      sudo pacman -Syyu
+
+      exit 0
+
+      ;;
+
+    *)
+
+      echo "Unknown command: $1"
+
+      exit 1
+
+      ;;
+
+  esac
+
+fi
+
+
+COMMAND=$1
+
+PACKAGE_NAME=$2
+
+
+case $COMMAND in
+
+  "install")
+
+    sudo pacman -S $PACKAGE_NAME
+
+    ;;
+
+  "r" | "remove")
+
+    sudo pacman -Rns $PACKAGE_NAME
+
+    ;;
+
+  *)
+
+    echo "Unknown command: $COMMAND"
+
+    exit 1
+
+    ;;
+
+esac
+
+case $COMMAND in
+
+  "install")
+
+    sudo pacman -S $PACKAGE_NAME
+
+    ;;
+
+  "r" | "remove")
+
+    sudo pacman -Rns $PACKAGE_NAME
+
+    ;;
+
+  *)
+
+    echo "Unknown command: $COMMAND"
+
+    exit 1
+
+    ;;
+
+esac
