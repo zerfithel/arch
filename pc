@@ -108,7 +108,7 @@ case $COMMAND in
 
   "r" | "remove")
 
-    sudo pacman -Rns $PACKAGE_NAME
+    sudo pacman -Rnsn $PACKAGE_NAME
 
     ;;
 
