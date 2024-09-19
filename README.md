@@ -10,7 +10,7 @@ To remove this package after adding it do /usr/local/bin simply do:
 sudo rm -rf /usr/local/bin/pc (or script name)
 
 Author: Zerfithel
-Discord (HELP CENTER): https://discord.gg/dfbpeQChHM
+Discord (HELP CENTER): https://discord.gg/qAznDdPFvy
 
 Commands:
 sudo pc install [package_name]
