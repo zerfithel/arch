@@ -3,7 +3,7 @@
 
 if [ $# -ne 1 ] && [ $# -ne 2 ]; then
 
-  echo "Usage: sudo pc install/remove <package_name> or sudo pc -v or sudo pc update or sudo pc upgrade"
+  echo "Usage: sudo pc -h to view available commands"
 
   exit 1
 
@@ -14,33 +14,17 @@ if [ $# -eq 1 ]; then
 
   case $1 in
 
-    "-v")
+    "-h")
 
-      echo "                            
-▓▓▓▓                    Manage pacman packages like on      
-▓▓  ▓▓                  Ubuntu/Debian based Distros!      
-▓▓  ░░▓▓                Made by: zerfithel      
-▒▒  ░░░░▓▓              Version: 1.0.1      
-▒▒▒▒░░▒▒░░▓▓            Get new scripts here: https://discord.gg/qAznDdPFvy      
-  ▒▒▒▒░░░░░░▓▓                
-    ▒▒▒▒░░░░░░▓▓              
-      ▒▒▒▒░░▒▒░░▓▓██          
-        ▒▒▒▒░░░░██▓▓██        
-          ▒▒  ██▓▓▓▓██        
-            ▒▒▓▓▓▓██▓▓██      
-          ██▓▓▒▒████▓▓▓▓██    
-            ████▒▒  ██▓▓▓▓██  
-                ▒▒    ██▓▓▓▓██
-                        ██▓▓██
-                ▒▒      ████  
-                              
-                ▒▒            "
+      echo "Manage packages with pacman easier! Available commands: sudo pc i/install [package] - installs package 
+      sudo pc r/remove [package] - removes package, dependecies, cache, configs etc.
+      sudo pc u/update - Only update sudo pc up/upgrade - Update & Upgrade INFO: Version: 1.0.2, Made by zerfithel"
 
       exit 0
 
       ;;
 
-    "update")
+    "u" | "update")
 
       sudo pacman -Syy
 
@@ -48,7 +32,7 @@ if [ $# -eq 1 ]; then
 
       ;;
 
-    "upgrade")
+    "up" | "upgrade")
 
       sudo pacman -Syyu
 
@@ -76,7 +60,7 @@ PACKAGE_NAME=$2
 
 case $COMMAND in
 
-  "install")
+  "i" | "install")
 
     sudo pacman -S $PACKAGE_NAME
 
@@ -100,7 +84,7 @@ esac
 
 case $COMMAND in
 
-  "install")
+  "i" | "install")
 
     sudo pacman -S $PACKAGE_NAME
 
