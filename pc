@@ -1,9 +1,11 @@
 #!/bin/bash
+
+
 # =============================================================================================================================
-# PC - Manage pacman packages easier and faster!
+# KniVe - Manage pacman packages easier and faster!
 # Made by: zerfithel (https://github.com/zerfithel)
-# Version: 1.0.2
-# To make script work do: mv /localization/of/script/scriptname /usr/local/bin/scriptname or /usr/local/bin
+# Script version: KniVe 1.0.3
+# To make script work do: mv /localization/of/script/pc /usr/local/bin/pc or /usr/local/bin
 # Use sudo pc -h to see all the commands!
 # =============================================================================================================================
 
