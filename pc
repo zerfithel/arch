@@ -1,12 +1,21 @@
 #!/bin/bash
 
-
+# ==========================================================================================================================
+#     Knive 1.0.4
+# ─▀▀▌───────▐▀▀
+# ─▄▀░◌░░░░░░░▀▄
+# ▐░░◌░▄▀██▄█░░░▌
+# ▐░░░▀████▀▄░░░▌
+#  ▀▄▄▄▄▄▄▄▄▄▄▄▀
+#     @zerfithel
 # =============================================================================================================================
-# KniVe - Manage pacman packages easier and faster!
-# Made by: zerfithel (https://github.com/zerfithel)
-# Script version: KniVe 1.0.3
-# To make script work do: mv /localization/of/script/pc /usr/local/bin/pc or /usr/local/bin
-# Use sudo pc -h to see all the commands!
+
+# ==========================================================================================================================
+# Installation Guide:
+# sudo chmod +x ~/Downloads/pc - Give script executing permissions then;
+# sudo mv ~/Downloads/pc /usr/local/bin/pc - Move script to system localization so you can execute it anywhere;
+# sudo pc -h - View all commands and start using the script!
+# Installation Guide & Script by: @zerfithel, you can edit the code if you want to
 # =============================================================================================================================
 
 if [ $# -ne 1 ] && [ $# -ne 2 ]; then
