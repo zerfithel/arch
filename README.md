@@ -4,10 +4,11 @@ Complete installation guide:
 > - sudo pacman -S git
 
 > Copy the repository
-> - git clone []
+> - git clone https://github.com/zerfithel/arch
 
 > Go to your file localization
-> - cd [localization/of/your/file]
+> - cd pc
+> - cd arch
 
 > Build the package
 > - makepkg -si
