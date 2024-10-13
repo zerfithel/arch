@@ -1,11 +1,8 @@
 #!/bin/bash
 
 # ==========================================================================================================================
-# Installation Guide:
-# sudo chmod +x ~/Downloads/pc - Give script executing permissions then;
-# sudo mv ~/Downloads/pc /usr/local/bin/pc - Move script to system localization so you can execute it anywhere;
-# sudo pc -h - View all commands and start using the script!
-# Installation Guide & Script by: @zerfithel, you can edit the code if you want to
+# You can find Installation Guide in README.md
+# Made by: @zerfithel (Also known as: @jedensiedem) --- DISCORD ACCS
 # =============================================================================================================================
 
 if [ $# -ne 1 ] && [ $# -ne 2 ]; then
