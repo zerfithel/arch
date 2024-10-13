@@ -1,16 +1,6 @@
 #!/bin/bash
 
 # ==========================================================================================================================
-#     Knive 1.0.4
-# ─▀▀▌───────▐▀▀
-# ─▄▀░◌░░░░░░░▀▄
-# ▐░░◌░▄▀██▄█░░░▌
-# ▐░░░▀████▀▄░░░▌
-#  ▀▄▄▄▄▄▄▄▄▄▄▄▀
-#     @zerfithel
-# =============================================================================================================================
-
-# ==========================================================================================================================
 # Installation Guide:
 # sudo chmod +x ~/Downloads/pc - Give script executing permissions then;
 # sudo mv ~/Downloads/pc /usr/local/bin/pc - Move script to system localization so you can execute it anywhere;
@@ -33,25 +23,36 @@ if [ $# -eq 1 ]; then
 
     "-h")
 
-      echo "Manage packages with pacman easier! Available commands: sudo pc i/install [package] - installs package 
-      sudo pc r/remove [package] - removes package, dependecies, cache, configs etc.
-      sudo pc u/update - Only update sudo pc up/upgrade - Update & Upgrade INFO: Version: 1.0.2, Made by zerfithel"
+      echo "sudo pc -S - Installs a package"
+      echo "sudo pc -R - Removes a package with it dependencies (-Rnsn)"
+      echo "sudo pc -Syu - Updates pacman packages, flatpak packages and AUR packages"
+      echo "sudo pc -Syuu - Creates timeshift, updates pacman, flatpak and AUR packages"
 
       exit 0
 
       ;;
 
-    "u" | "update")
+    "-Syu" | "update")
 
-      sudo pacman -Syy
+      sudo pacman -Syu
+      flatpak list
+      flatpak update
+      sudo yay -Syu
+      neofetch
+      echo "KniVe: Done ✅"
 
       exit 0
 
       ;;
 
-    "up" | "upgrade")
+    "-Syuu" | "upgrade")
 
-      sudo pacman -Syyu
+      sudo timeshift --create
+      sudo yay -Syu
+      sudo pacman -Syu
+      flatpak list
+      flatpak update
+      neofetch
 
       exit 0
 
@@ -74,40 +75,15 @@ COMMAND=$1
 
 PACKAGE_NAME=$2
 
-
 case $COMMAND in
 
-  "i" | "install")
+  "-S" | "install")
 
     sudo pacman -S $PACKAGE_NAME
 
     ;;
 
-  "r" | "remove")
-
-    sudo pacman -Rns $PACKAGE_NAME
-
-    ;;
-
-  *)
-
-    echo "Unknown command: $COMMAND"
-
-    exit 1
-
-    ;;
-
-esac
-
-case $COMMAND in
-
-  "i" | "install")
-
-    sudo pacman -S $PACKAGE_NAME
-
-    ;;
-
-  "r" | "remove")
+  "-R" | "remove")
 
     sudo pacman -Rnsn $PACKAGE_NAME
 
@@ -122,3 +98,4 @@ case $COMMAND in
     ;;
 
 esac
+	
