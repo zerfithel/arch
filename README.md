@@ -5,6 +5,8 @@ Complete installation guide:
 
 > Copy the repository
 > - git clone https://github.com/zerfithel/arch
+> - OR (If you want to use Experimental branch)
+> - git clone https://github.com/zerfithel/arch/experimental
 
 > Go to your file localization
 > - cd pc
