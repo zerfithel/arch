@@ -1,13 +1,88 @@
 #!/bin/bash
 
 # ==========================================================================================================================
-# You can find Installation Guide in README.md Ye
+# You can find Installation Guide in README.md
 # Made by: @zerfithel (Also known as: @jedensiedem) --- DISCORD ACCS
-# =============================================================================================================================
+# ==========================================================================================================================
+
+# IMPORTANT INFO:
+# To check how did the update go and what was updated please navigate to /usr/local/bin
+# Do: cd /usr/local/bin and then ls -la
+# You can do nano/vim flatpak_update.log and nano/vim pacman_update.log
+# Please note that this is not full version of update. Please follow my PKGs to see it get better with time. Use experimental at your own risk!
+
+
+# ░██╗░░░░░░░██╗░█████╗░██████╗░███╗░░██╗██╗███╗░░██╗░██████╗░
+# ░██║░░██╗░░██║██╔══██╗██╔══██╗████╗░██║██║████╗░██║██╔════╝░
+# ░╚██╗████╗██╔╝███████║██████╔╝██╔██╗██║██║██╔██╗██║██║░░██╗░
+# ░░████╔═████║░██╔══██║██╔══██╗██║╚████║██║██║╚████║██║░░╚██╗
+# ░░╚██╔╝░╚██╔╝░██║░░██║██║░░██║██║░╚███║██║██║░╚███║╚██████╔╝
+
+THIS IS EXPERIMENTAL BRANCH
+THIS MEANS THIS CAN NOT WORK, CAN NOT BE STABLE AND CAN POTENTIALLY HARM YOUR DEVICE
+YOU USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+IF YOU WANT TO BE MORE SAFE PLEASE USE STABLE BRANCH
+YOU CAN ALSO CHECK THE CODE AND SEE IF ITS OKAY
+CHECK STABLE BRANCH: https://github.com/zerfithel/arch/stable/pc
+
+# ░██╗░░░░░░░██╗░█████╗░██████╗░███╗░░██╗██╗███╗░░██╗░██████╗░
+# ░██║░░██╗░░██║██╔══██╗██╔══██╗████╗░██║██║████╗░██║██╔════╝░
+# ░╚██╗████╗██╔╝███████║██████╔╝██╔██╗██║██║██╔██╗██║██║░░██╗░
+# ░░████╔═████║░██╔══██║██╔══██╗██║╚████║██║██║╚████║██║░░╚██╗
+# ░░╚██╔╝░╚██╔╝░██║░░██║██║░░██║██║░╚███║██║██║░╚███║╚██████╔╝
+
+
+
+
+
+# ░██╗░░░░░░░██╗░█████╗░██████╗░███╗░░██╗██╗███╗░░██╗░██████╗░
+# ░██║░░██╗░░██║██╔══██╗██╔══██╗████╗░██║██║████╗░██║██╔════╝░
+# ░╚██╗████╗██╔╝███████║██████╔╝██╔██╗██║██║██╔██╗██║██║░░██╗░
+# ░░████╔═████║░██╔══██║██╔══██╗██║╚████║██║██║╚████║██║░░╚██╗
+# ░░╚██╔╝░╚██╔╝░██║░░██║██║░░██║██║░╚███║██║██║░╚███║╚██████╔╝
+
+THIS IS EXPERIMENTAL BRANCH
+THIS MEANS THIS CAN NOT WORK, CAN NOT BE STABLE AND CAN POTENTIALLY HARM YOUR DEVICE
+YOU USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+IF YOU WANT TO BE MORE SAFE PLEASE USE STABLE BRANCH
+YOU CAN ALSO CHECK THE CODE AND SEE IF ITS OKAY
+CHECK STABLE BRANCH: https://github.com/zerfithel/arch/stable/pc
+
+# ░██╗░░░░░░░██╗░█████╗░██████╗░███╗░░██╗██╗███╗░░██╗░██████╗░
+# ░██║░░██╗░░██║██╔══██╗██╔══██╗████╗░██║██║████╗░██║██╔════╝░
+# ░╚██╗████╗██╔╝███████║██████╔╝██╔██╗██║██║██╔██╗██║██║░░██╗░
+# ░░████╔═████║░██╔══██║██╔══██╗██║╚████║██║██║╚████║██║░░╚██╗
+# ░░╚██╔╝░╚██╔╝░██║░░██║██║░░██║██║░╚███║██║██║░╚███║╚██████╔╝
+
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+# USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+
+
+# CODE:
+
+
 
 if [ $# -ne 1 ] && [ $# -ne 2 ]; then
 
-  echo "Usage: sudo pc -h to view available commands"
+  echo "Usage: sudo knive -h to view available commands"
 
   exit 1
 
@@ -20,10 +95,10 @@ if [ $# -eq 1 ]; then
 
     "-h")
 
-      echo "sudo pc -S - Installs a package"
-      echo "sudo pc -R - Removes a package with it dependencies (-Rnsn)"
-      echo "sudo pc -Syu - Updates pacman packages, flatpak packages and AUR packages"
-      echo "sudo pc -Syuu - Creates timeshift, updates pacman, flatpak and AUR packages"
+      echo "sudo knive -S - Installs a package"
+      echo "sudo knive -R - Removes a package with it dependencies (-Rnsn)"
+      echo "sudo knive -Syu - Updates pacman packages, flatpak packages and AUR packages"
+      echo "sudo knive -Syuu - Creates timeshift, updates pacman, flatpak and AUR packages"
 
       exit 0
 
@@ -31,10 +106,30 @@ if [ $# -eq 1 ]; then
 
     "-Syu" | "update")
 
-      sudo pacman -Syu
-      flatpak list
-      flatpak update
-      sudo yay -Syu
+      START_TIME=$(date +%s)  # Start time
+      echo "Updating packages..."
+
+      # Update pacman packages
+      PACMAN_OUTPUT=$(sudo pacman -Syu --noconfirm 2>&1 | tee pacman_update.log)
+      PACMAN_UPDATES=$(echo "$PACMAN_OUTPUT" | grep -o '[0-9]* upgraded' | awk '{print $1}' | tr -d '\n')
+      PACMAN_CONFLICTS=$(echo "$PACMAN_OUTPUT" | grep -c "conflict")
+
+      # Update flatpak packages
+      FLATPAK_OUTPUT=$(flatpak update --noninteractive 2>&1 | tee flatpak_update.log)
+      FLATPAK_UPDATES=$(echo "$FLATPAK_OUTPUT" | grep -o '[0-9]* upgraded' | awk '{print $1}' | tr -d '\n')
+      FLATPAK_CONFLICTS=$(echo "$FLATPAK_OUTPUT" | grep -c "conflict")
+
+      # Calculate elapsed time
+      END_TIME=$(date +%s)
+      ELAPSED_TIME=$((END_TIME - START_TIME))
+
+      # Display results
+      echo "Pacman updates: ${PACMAN_UPDATES:-0} packages upgraded."
+      echo "Pacman conflicts: ${PACMAN_CONFLICTS:-0} conflicts."
+      echo "Flatpak updates: ${FLATPAK_UPDATES:-0} packages upgraded."
+      echo "Flatpak conflicts: ${FLATPAK_CONFLICTS:-0} conflicts."
+      echo "Update completed in $ELAPSED_TIME seconds."
+
       neofetch
       echo "KniVe: Done ✅"
 
@@ -95,4 +190,78 @@ case $COMMAND in
     ;;
 
 esac
-	
+
+
+
+
+
+# ░██╗░░░░░░░██╗░█████╗░██████╗░███╗░░██╗██╗███╗░░██╗░██████╗░
+# ░██║░░██╗░░██║██╔══██╗██╔══██╗████╗░██║██║████╗░██║██╔════╝░
+# ░╚██╗████╗██╔╝███████║██████╔╝██╔██╗██║██║██╔██╗██║██║░░██╗░
+# ░░████╔═████║░██╔══██║██╔══██╗██║╚████║██║██║╚████║██║░░╚██╗
+# ░░╚██╔╝░╚██╔╝░██║░░██║██║░░██║██║░╚███║██║██║░╚███║╚██████╔╝
+
+THIS IS EXPERIMENTAL BRANCH
+THIS MEANS THIS CAN NOT WORK, CAN NOT BE STABLE AND CAN POTENTIALLY HARM YOUR DEVICE
+YOU USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+IF YOU WANT TO BE MORE SAFE PLEASE USE STABLE BRANCH
+YOU CAN ALSO CHECK THE CODE AND SEE IF ITS OKAY
+CHECK STABLE BRANCH: https://github.com/zerfithel/arch/stable/pc
+
+# ░██╗░░░░░░░██╗░█████╗░██████╗░███╗░░██╗██╗███╗░░██╗░██████╗░
+# ░██║░░██╗░░██║██╔══██╗██╔══██╗████╗░██║██║████╗░██║██╔════╝░
+# ░╚██╗████╗██╔╝███████║██████╔╝██╔██╗██║██║██╔██╗██║██║░░██╗░
+# ░░████╔═████║░██╔══██║██╔══██╗██║╚████║██║██║╚████║██║░░╚██╗
+# ░░╚██╔╝░╚██╔╝░██║░░██║██║░░██║██║░╚███║██║██║░╚███║╚██████╔╝
+
+
+
+# ░██╗░░░░░░░██╗░█████╗░██████╗░███╗░░██╗██╗███╗░░██╗░██████╗░
+# ░██║░░██╗░░██║██╔══██╗██╔══██╗████╗░██║██║████╗░██║██╔════╝░
+# ░╚██╗████╗██╔╝███████║██████╔╝██╔██╗██║██║██╔██╗██║██║░░██╗░
+# ░░████╔═████║░██╔══██║██╔══██╗██║╚████║██║██║╚████║██║░░╚██╗
+# ░░╚██╔╝░╚██╔╝░██║░░██║██║░░██║██║░╚███║██║██║░╚███║╚██████╔╝
+
+THIS IS EXPERIMENTAL BRANCH
+THIS MEANS THIS CAN NOT WORK, CAN NOT BE STABLE AND CAN POTENTIALLY HARM YOUR DEVICE
+YOU USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+IF YOU WANT TO BE MORE SAFE PLEASE USE STABLE BRANCH
+YOU CAN ALSO CHECK THE CODE AND SEE IF ITS OKAY
+CHECK STABLE BRANCH: https://github.com/zerfithel/arch/stable/pc
+
+# ░██╗░░░░░░░██╗░█████╗░██████╗░███╗░░██╗██╗███╗░░██╗░██████╗░
+# ░██║░░██╗░░██║██╔══██╗██╔══██╗████╗░██║██║████╗░██║██╔════╝░
+# ░╚██╗████╗██╔╝███████║██████╔╝██╔██╗██║██║██╔██╗██║██║░░██╗░
+# ░░████╔═████║░██╔══██║██╔══██╗██║╚████║██║██║╚████║██║░░╚██╗
+# ░░╚██╔╝░╚██╔╝░██║░░██║██║░░██║██║░╚███║██║██║░╚███║╚██████╔╝
+
+
+
+# ░██╗░░░░░░░██╗░█████╗░██████╗░███╗░░██╗██╗███╗░░██╗░██████╗░
+# ░██║░░██╗░░██║██╔══██╗██╔══██╗████╗░██║██║████╗░██║██╔════╝░
+# ░╚██╗████╗██╔╝███████║██████╔╝██╔██╗██║██║██╔██╗██║██║░░██╗░
+# ░░████╔═████║░██╔══██║██╔══██╗██║╚████║██║██║╚████║██║░░╚██╗
+# ░░╚██╔╝░╚██╔╝░██║░░██║██║░░██║██║░╚███║██║██║░╚███║╚██████╔╝
+
+THIS IS EXPERIMENTAL BRANCH
+THIS MEANS THIS CAN NOT WORK, CAN NOT BE STABLE AND CAN POTENTIALLY HARM YOUR DEVICE
+YOU USE EXPERIMENTAL BRANCH AT YOUR OWN RISK
+IF YOU WANT TO BE MORE SAFE PLEASE USE STABLE BRANCH
+YOU CAN ALSO CHECK THE CODE AND SEE IF ITS OKAY
+CHECK STABLE BRANCH: https://github.com/zerfithel/arch/stable/pc
+
+# ░██╗░░░░░░░██╗░█████╗░██████╗░███╗░░██╗██╗███╗░░██╗░██████╗░
+# ░██║░░██╗░░██║██╔══██╗██╔══██╗████╗░██║██║████╗░██║██╔════╝░
+# ░╚██╗████╗██╔╝███████║██████╔╝██╔██╗██║██║██╔██╗██║██║░░██╗░
+# ░░████╔═████║░██╔══██║██╔══██╗██║╚████║██║██║╚████║██║░░╚██╗
+# ░░╚██╔╝░╚██╔╝░██║░░██║██║░░██║██║░╚███║██║██║░╚███║╚██████╔╝
+
+
+
+
+# I am not responsible for any damages; you proceed at your own risk!
+# I am not responsible for any damages; you proceed at your own risk!
+# I am not responsible for any damages; you proceed at your own risk!
+# I am not responsible for any damages; you proceed at your own risk!
+# I am not responsible for any damages; you proceed at your own risk!
+# I am not responsible for any damages; you proceed at your own risk!
