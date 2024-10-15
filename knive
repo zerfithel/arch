@@ -7,7 +7,7 @@
 
 if [ $# -ne 1 ] && [ $# -ne 2 ]; then
 
-  echo "Usage: sudo pc -h to view available commands"
+  echo "Usage: sudo knive -h to view available commands"
 
   exit 1
 
@@ -20,10 +20,10 @@ if [ $# -eq 1 ]; then
 
     "-h")
 
-      echo "sudo pc -S - Installs a package"
-      echo "sudo pc -R - Removes a package with it dependencies (-Rnsn)"
-      echo "sudo pc -Syu - Updates pacman packages, flatpak packages and AUR packages"
-      echo "sudo pc -Syuu - Creates timeshift, updates pacman, flatpak and AUR packages"
+      echo "sudo knive -S - Installs a package"
+      echo "sudo knive -R - Removes a package with it dependencies (-Rnsn)"
+      echo "sudo knive -Syu - Updates pacman packages, flatpak packages and AUR packages"
+      echo "sudo knive -Syuu - Creates timeshift, updates pacman, flatpak and AUR packages"
 
       exit 0
 
